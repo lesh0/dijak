@@ -24,6 +24,7 @@ $user_id = $_SESSION['user_id'];
      
          <th> Ime </th>
          <th> Opis  </th>
+         <th> Gumb </th>
          
      
      </tr>
@@ -37,7 +38,10 @@ $user_id = $_SESSION['user_id'];
           
             echo'<td>'.$row['title'].'</td>';
             echo'<td>'.$row['content'].'</td>';
-            
+            echo'<td>';
+            echo '<a href="post_delete.php?id='.$row['id'].'" onclick="return confirm(\'Are you sure?\');"> delete </a>';
+            echo '<a href="post_edit.php?id='.$row['id'].'"> edit </a>';
+            echo '</td>';
             
           echo '</tr>';
             
